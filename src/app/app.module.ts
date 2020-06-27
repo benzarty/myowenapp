@@ -8,6 +8,7 @@ import { FormsModule } from '@angular/forms';
 import { AppareilService } from './services/appareil.service';
 import { AuthService} from './services/auth.service';
 import { AuthGuard} from './services/AuthGuard .service';
+import {HttpClientModule} from '@angular/common/http';
 
 
 import { AuthComponent } from './auth/auth.component';
@@ -41,6 +42,7 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     FormsModule,
+    HttpClientModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [ AppareilService, AuthService, AuthGuard],
